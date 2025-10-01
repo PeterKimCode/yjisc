@@ -125,6 +125,10 @@ img {
   transform: scaleX(1);
 }
 
+.primary-nav a.active::after {
+  transform: scaleX(1);
+}
+
 .nav-actions {
   display: flex;
   gap: 0.75rem;
@@ -312,6 +316,21 @@ img {
   top: -60px;
   right: -60px;
   z-index: 1;
+}
+
+.hero--sub {
+  padding: 3.2rem 0 3.6rem;
+  background: radial-gradient(circle at 10% 10%, rgba(74, 167, 255, 0.08) 0, rgba(74, 167, 255, 0) 55%),
+    #ffffff;
+}
+
+.hero--sub .hero-inner {
+  grid-template-columns: minmax(0, 1fr);
+  text-align: left;
+}
+
+.hero--sub .hero-copy {
+  max-width: 720px;
 }
 
 .quick-links {
@@ -519,6 +538,51 @@ img {
   line-height: 1.6;
 }
 
+.program-card ul {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.program-card ul li + li {
+  margin-top: 0.35rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.timeline-item {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 1.6rem 1.8rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.timeline-item h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.4rem;
+  color: var(--color-navy);
+}
+
+.timeline-item p {
+  margin: 0;
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.event-grid .event-card {
+  height: 100%;
+}
+
 .cta {
   position: relative;
   background: linear-gradient(135deg, rgba(8, 59, 114, 0.95), rgba(0, 166, 158, 0.85));
@@ -628,7 +692,8 @@ img {
 
   .quick-card-grid,
   .program-grid,
-  .stats-grid {
+  .stats-grid,
+  .event-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -674,7 +739,8 @@ img {
 
   .quick-card-grid,
   .program-grid,
-  .stats-grid {
+  .stats-grid,
+  .event-grid {
     grid-template-columns: 1fr;
   }
 
